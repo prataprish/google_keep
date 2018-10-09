@@ -1,0 +1,58 @@
+
+<div class="col-12">
+  <div class="overlay col-12" id="overlay">
+    <div class="note sec-note">
+      <div class="col-12" id="input_title_sec" contenteditable="true">
+        <span class="title np-text-sec" onclick="makeWay(this,document.getElementById('input_title_sec'),false)">Title</span>
+      </div>
+      <div class="col-12" id="input_body_sec" contenteditable="true">
+        <span class="sample-text np-text-sec" onclick="makeWay(this,document.getElementById('input_body_sec'),false)">Take a note...</span>
+      </div>
+      <div class="col-12" style="">
+        <span class="col" onclick="document.getElementById('color_sec').click()">&#x2637;</span>
+        <input type="color" style="display:none" onchange="changeDefColor(this.value,'sec-note')" id="color_sec" />
+        <select class="form-ele" style="width:100px;display:inline" id="edit_label">
+          <option value="">No Label</option>
+        </select>
+        <span class="shift-right" id="sec-close" style="margin:0 10px;">CLOSE</span>
+        <span class="shift-right" id="sec-save" >SAVE</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-12" id="overlay-tag">
+    <div class="note tag-note">
+      <div class="col-12 title" id="new_tag_name" contenteditable="true">
+        <span class="" onclick="makeWay(this,document.getElementById('new_tag_name'),false)">Title</span>
+      </div>
+      <div class="col-12" style="">
+        <span class="col" onclick="document.getElementById('color_tag').click()">&#x2637;</span>
+        <input type="color" style="display:none" onchange="document.getElementsByClassName('tag-note')[0].style.backgroundColor = this.value" id="color_tag" />
+        <span class="shift-right" id="tag-close" onclick="document.getElementById('overlay-tag').style.display = 'none'" style="margin:0 10px;">CLOSE</span>
+        <span class="shift-right" id="tag-save"  data-id="0" onclick="new_tag(this.getAttribute('data-id'))" >SAVE</span>
+      </div>
+    </div>
+  </div>
+  <div id="nav">
+  </div>
+  <div id="main_body" class="text-center">
+    <div class="note primary-note">
+      <div class="col-12 d-none" id="input_title" style="display:none;">
+        <span class="title np-text" onclick="makeWay(this,document.getElementById('input_title'))">Title</span>
+      </div>
+      <div class="col-12" id="input_body" >
+        <span class="sample-text np-text" onclick="makeWay(this,document.getElementById('input_body'))">Take a note...</span>
+      </div>
+      <div class="col-12 d-none" style="display:none;">
+        <span class="col" onclick="document.getElementById('color').click()">&#x2637;</span>
+        <select class="form-ele" style="width:100px;display:inline" id="init_label">
+          <option value="">No Label</option>
+        </select>
+        <input type="color" style="display:none" onchange="changeDefColor(this.value,'primary-note')" id="color"/>
+        <span class="shift-right" onclick="save_note()" >CLOSE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+</script>

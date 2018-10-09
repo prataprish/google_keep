@@ -1,0 +1,186 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  background: #e8e8e8;
+  overflow: hidden;
+  font-family: 'Product Sans',Arial,sans-serif;
+}
+
+.col-2,.col-3,.col-4,.col-8,.col-12{
+  display: inline-block;
+  box-sizing: border-box;
+}
+.col-2{
+  width: 16%;
+}
+.col-3{
+  width: 25%;
+}
+.col-4{
+  width: 33.4%;
+}
+.col-8{
+  width: 66.8%;
+}
+.col-12{
+  width: 100%;
+}
+.hr{
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 0 !important;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.body-font{
+  font-size: 1.3rem;
+}
+.text-center{
+  text-align: center;
+}
+.btn{
+  border: none;
+  background: white;
+  height: 36px;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}
+.form-ele{
+  display: block;
+  width: calc(100% - 20px);
+  height: 36px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.shift-right{
+  float: right;
+}
+.shift-left{
+  float: left;
+}
+.tag{
+  font-size: 0.7rem;
+  /* color: white; */
+  padding: 1px 2px;
+}
+.pointer:hover{
+  cursor: pointer;
+}
+.label{
+  font-size: 0.8rem;
+}
+.header{
+  background: #ffbd00;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 5vmax;
+}
+.header > * {
+  display: flex;
+  align-items: center;
+  margin: 5px 7px;
+  height: 3vmax;
+}
+
+#nav{
+  position: absolute;
+  top: 5vmax;
+  width: 200px;
+  left: -200px;
+  background: #d8d8d8;
+  border-right: 1px inset transparent;
+  height: calc(100% - 5vmax);
+  transition: left 200ms ease;
+}
+
+#main_body{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: width 200ms ease;
+}
+
+#nav > * {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.note{
+  margin: 30px 15%;
+  width: 70%;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 2px 2px 10px #ccc;
+  box-sizing: border-box;
+  text-align: justify;
+}
+.note > div{
+  margin-bottom: 10px;
+}
+.note .title{
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.sample-text{
+  color: #ccc;
+}
+
+@media screen and (max-width: 700px) {
+  .col-xs-12{
+    width: 100%;
+  }
+  .header{
+    height: 9vmax;
+  }
+  .header > *{
+    height: 5vmax;
+  }
+  #nav{
+    top: 9vmax;
+    height: calc(100% - 9vmax);
+  }
+  .note{
+    margin: 30px 3vw;
+    width: 94vw;
+  }
+}
+
+.signup-box{
+  padding: 10% 10px;
+  text-align: left;
+}
+.signup-box *{
+  margin: 10px;
+}
+.signup-box > div{
+  width: calc(100% - 20px);
+  background: #ffbd00;
+}
+#signupForm{
+  text-align: center;
+}
+#errorMsg{
+  font-size: 12px;
+}
+
+[contenteditable]:focus{
+  outline: none;
+}
+
+.overlay,#overlay-tag{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.overlay .note,#overlay-tag .note{
+  position: absolute;
+  top: 20%;
+}
